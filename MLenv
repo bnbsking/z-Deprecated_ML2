@@ -1,0 +1,26 @@
+1 win10 下載ubuntu iso檔 並製作開機碟 gpt FAT
+2 win10 執行 diskmgmt.msc 壓縮磁碟區
+3 win10 電源選項 關閉快速開機
+4 bios 關閉快速開機 關閉安全開機 更改開機順序
+5 ubuntu安裝 裝完後拔USB重開機
+6 sudo apt update
+7 sudo apt install gnome-tweak
+
+8 sudo apt install vim
+9 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb ＃-c繼續下載
+sudo dpkg -i google-chrome-stable_current_amd64.deb ＃dpkg專用於.deb -i install
+釘選至工作列
+
+10 安裝顯卡驅動
+	sudo add-apt-repository ppa:graphics-drivers/ppa
+	sudo apt install ubuntu-drivers-common
+	ubuntu-drivers devices 			#查看需要裝哪個版本驅動 ＃目前是440
+	sudo apt install nvidia-driver-440 
+	sudo reboot
+
+	sudo update-pciids
+	lspci | grep NVIDIA	#確認有無裝好一
+	dpkg --get-selections   #確認有無裝好二
+
+	
+
