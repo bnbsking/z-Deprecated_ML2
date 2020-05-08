@@ -21,6 +21,35 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb ＃dpkg專用於.deb -i inst
 	sudo update-pciids
 	lspci | grep NVIDIA	#確認有無裝好一
 	dpkg --get-selections   #確認有無裝好二
+	apt list --installed
+
+11 CUDA
+	建議dpkg一系列指令
+	https://developer.nvidia.com/cuda-downloads
+	設定環境變數
+	$ export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}
+	$ export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\
+${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+	$ cuda-install-samples-10.2.sh ~
+	$ cd ~/NVIDIA_CUDA-10.2_Samples/5_Simulations/nbody
+	$ make
+	$ ./nbody	
+確認有無安裝 cat /usr/local/cuda/version.txt
+
+12 CUDNN
+https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
+確認有無安裝 cat
+
+13 miniconda
+https://docs.conda.io/en/latest/miniconda.html
+sh安裝在 /home/James/miniconda3
+去/etc/env設定環境變數 /home/James/miniconda3/bin
+更新環境變數 source ~/.bashrc
+可下conda create -n
+jupyter notebook 要用conda install 裝
+	sudo chown -R $USER:$USER miniconda3
+	sudo chmod -R 777 miniconda3 
+pip install tensorflow-gpu
 
 	
 
