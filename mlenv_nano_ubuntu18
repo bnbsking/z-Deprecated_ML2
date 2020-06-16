@@ -1,3 +1,10 @@
+sudo apt-get install python3-pip
+pip3 install virtualenv
+cd pathToInstall
+virtualenv -p Python3 myenv
+cd ./myenv/bin
+source activate
+
 ?NVIDIA SDK Manager
 
 sudo apt-get install libhdf5-serial-dev hdf5-tools
