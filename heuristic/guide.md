@@ -11,8 +11,8 @@ Heuristic algorithm
 + Continuous, Discrete
 + Problem dependent, problem independent (meta)
 + Algorithms
-  + Climbing -> One initial find local best 
-  + Tabu -> One initial find local best + hash table (key:state, val:fobidden times) evaluate all loss(neighbor) if smaller loss and in hash table, then forbidden minus 1. Delete state from forbidden if forbidden==0 
-  + Annealing -> One initial find probability(local best, worse) which P decay along with time (exp(-deltaC/T0))
-  + Gene 
-  + Ant
+  + Climbing -> One finder, local best 
+  + Tabu -> One initial find, local best + hash table (key:state, val:fobidden times) evaluate all loss(neighbor) if smaller loss and in hash table, then forbidden minus 1. Delete state from forbidden if forbidden==0 
+  + Annealing -> One finder, probability(local best, worse) which P decays along with time (exp(-deltaC/T0))
+  + Gene -> One finder at initial but reproduce multiple. Evaluation, Mutation, Crossover, Death (Population size).
+  + (swarm intelligence) Ant -> Multiple finder, local best + pheromones dissipate
