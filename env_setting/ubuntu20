@@ -1,0 +1,5 @@
+install nvidia driver e.g. ./NVIDIA-Linux-x86_64-470.74.run
+install cuda e.g. ./cuda_11.2.2_460.32.03_linux.run
+  export PATH=$PATH:/usr/local/cuda-11.2/bin
+  export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64
+install cudnn
