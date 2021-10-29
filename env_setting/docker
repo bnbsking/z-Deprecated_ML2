@@ -1,0 +1,3 @@
+install docker
+install nvidia driver on host
+install nvidia-docker2
